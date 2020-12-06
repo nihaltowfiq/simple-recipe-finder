@@ -1,38 +1,75 @@
-.App {
+.app {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.app_search > input {
+  width: 300px;
+  height: 30px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 20px;
+  border: 0;
+  outline: none;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.app_search > button {
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  outline: none;
+  cursor: pointer;
+  background-color: white;
+}
+.app_ingredientWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.app_ingredient {
+  width: 150px;
+  height: 200px;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  margin: 20px;
+}
+/* .app_ingredient:hover {
+  width: 160px;
+  height: 210px;
+} */
+.app_ingredient > img {
+  height: 80px;
+  width: 120px;
+  border-radius: 10px;
+  margin: 10px;
+}
+.app_ingredient > span {
+  font-size: 16px;
+}
+.app_steps {
+  overflow-y: scroll;
+  position: relative;
+  top: 30px;
+  visibility: hidden;
+  transition: 0.4s;
+  opacity: 0;
+}
+.app_steps > p {
+  margin: 0;
+  font-size: 12px;
+  text-align: justify;
+}
+.app_ingredient:hover .app_steps {
+  visibility: initial;
+  top: 0px;
+  opacity: 1;
 }
